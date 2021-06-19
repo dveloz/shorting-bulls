@@ -1,10 +1,20 @@
  Investigación:
+
+
     Plataformas:
-        ☐ GBMHomeBroker - David 
-        ☐ ETORO - David
-        ☐ OANDA - Arqui
         ☐ IQOPTION - Arqui
-        ☐ INTERACTIVE BROKERS - David
-        ☐ SAXO BANK - Arqui
+        INTERACTIVE BROKERS (David): 
+            ☐ Comisiones 
+            ☐ Crear cuenta
+            ☐ Estudiar api
+            Implementar API:
+                ☐ Poder comprar y vender tickers
+
+        FINVIZ (Arqui):
+            ☐ Explorar características
+            ☐ Conectar a python
+            ☐ Hacer analisis de prueba
+
+            
     
     ☐ Estrategias de inversión 
