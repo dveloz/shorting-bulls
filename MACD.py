@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from pandas_datareader import data
-from datetime import date
+from datetime import date, datetime
 from matplotlib import gridspec
 import yfinance as yf 
 
@@ -84,10 +84,34 @@ if __name__ == '__main__':
     
     #print(titulo)
     #Plot Price, Signals, and MACD
+
+    remove_weekends = True
+
     fig1 = plt.figure(constrained_layout=True)
     gs = fig1.add_gridspec(3, 1)
     plt.suptitle(titulo, fontsize=14, fontweight="bold", x=0.12, horizontalalignment='left')
     plt.subplot(gs[:2, :])
+    if remove_weekends:
+        # resetting index 
+        df.reset_index(inplace= True)
+        # renaming columns
+        old_cols = df.columns
+        new_cols = ['date'] + old_cols[1::]
+        df.columns = new_cols
+        # checking correct format
+        if df['date'] != datetime:
+            # WRITE CORRECT FORMAT !!
+            df['date'] = pd.to_datetime(df['date'], format = '')
+        # getting day of the week
+        df['weekday'] = [datetime.weekday(x) for x in df['date']]
+        # filtering weekends
+        saturday = df['weekday'] == 5
+        sunday = df['weekday'] == 6
+        df = df[~(sunday | saturday)]
+        # setting dates as index 
+        df.set_index('date', inplace = True)
+        # dropping weekday col
+        df.drop('weekday', axis = 1, inplace = True)
     plt.scatter(df.index, df['Buy_Price'], color='green', label='Buy', marker='^', alpha=1)
     plt.scatter(df.index, df['Sell_Price'], color='red', label='Sell', marker='v', alpha=1)
     plt.plot(df['Close'], color='blue', alpha=0.75)
