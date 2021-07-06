@@ -1,11 +1,9 @@
  Investigación:
-
-
     Plataformas:
         ☐ IQOPTION - Arqui
         INTERACTIVE BROKERS (David): 
             ☐ Comisiones 
-            ☐ Crear cuenta
+            ✔ Crear cuenta @done(21-06-19 17:51)
             ☐ Estudiar api
             Implementar API:
                 ☐ Poder comprar y vender tickers
@@ -14,7 +12,39 @@
             ☐ Explorar características
             ☐ Conectar a python
             ☐ Hacer analisis de prueba
+        
+        ANALISIS DE TARIFAS:
+            IQ-OPTION
+            ETORO
+            INTERACTIVE-BROKERS
 
-            
+        Estudiar acerca de diferentes 
+
+Forex Trader:
+    datos de entrada:
+        Series de tiempo divisa:
+            ☐ crear API (Arqui)
+            ☐ implementar programa main (Arqui)
+        Noticias:
+            crear webscraper:
+                ☐ Twitter (Arqui)
+                ☐ Reddit (David)
+                ☐ Google news (David)
+            ☐ implementar a main (David)
+        Correlaciones de mercado (Arqui):
+            ☐ hacer algo
+            ☐ implementar main           
+
+        Desempeño de empresas nacionales (Arqui):
+            ☐ hacer algo
+            ☐ implementar main           
     
-    ☐ Estrategias de inversión 
+    Clasificador (David):
+        ☐ configurar entrada
+        ☐ clasifiqar [up, down]         
+        ☐ implementar a main
+
+    Backtest (David):
+    
+        
+    Datos de salida:         
